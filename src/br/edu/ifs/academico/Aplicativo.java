@@ -5,22 +5,28 @@ import java.util.Scanner;
 public class Aplicativo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Aluno aluno = new Aluno();
-        String nome = sc.next();
-        aluno.setNome(nome);
-        System.out.println(aluno.getNome());
 
-        String dataNascimento = sc.next();
-        aluno.setDataNascimento(dataNascimento);
-        System.out.println(aluno.getDataNascimento());
+        Menu menu = new Menu();
+        System.out.println(menu.getMenu());
 
-        String localNascimento = sc.next();
-        aluno.setLocalNascimento(localNascimento);
-        System.out.println(aluno.getLocalNascimento());
+        int opcao = sc.nextInt();
 
-        char sexo = sc.next().charAt(0);
-        aluno.setSexo(sexo);
-        System.out.println(aluno.getSexo());
+        while(opcao != 0){
+            switch(opcao){
+                case 1:
+                    System.out.println("01 - Cadastrar aluno");
+                    break;
+                case 2:
+                    System.out.println("02 - Cadastrar professor");
+                    break;
+                case 3:
+                    System.out.println("03 - Cadastrar psicólogo");
+                    break;
+                case 4:
+                    System.out.println("04 - Cadastrar técnico");
+                    break;
 
+            }
+        }
     }
 }

@@ -13,6 +13,8 @@ public class Menu {
                 + "11 - Listar Alunos \n"
                 + "12 - Listar Professores \n"
                 + "13 - Listar Psicólogos \n"
-                + "14 - Listar Técnicos";
+                + "14 - Listar Técnicos\n"
+                + "0 - Sair";
+
     }
 }
