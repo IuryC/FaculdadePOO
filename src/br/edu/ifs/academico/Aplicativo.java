@@ -25,8 +25,11 @@ public class Aplicativo {
                 case 4:
                     System.out.println("04 - Cadastrar técnico");
                     break;
-
+                default:
             }
+            System.out.println(menu.getMenu());
+            opcao = sc.nextInt();
         }
+        System.out.println("Programa encerrado");
     }
 }
