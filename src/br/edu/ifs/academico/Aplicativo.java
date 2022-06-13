@@ -40,6 +40,15 @@ public class Aplicativo {
                     System.out.println("Insira o local de nascimento: ");
                     String localNascimento = sc.next();
                     aluno.setLocalNascimento(localNascimento);
+                    System.out.println("Insira a primeira nota: ");
+                    double nota1 = sc.nextDouble();
+                    aluno.setNota1(nota1);
+                    System.out.println("Insira a segunda nota: ");
+                    double nota2 = sc.nextDouble();
+                    aluno.setNota2(nota2);
+                    System.out.println("Insira a terceira nota: ");
+                    double nota3 = sc.nextDouble();
+                    aluno.setNota3(nota3);
 
                     alunos[contAluno] = aluno;
                     contAluno++;
@@ -58,6 +67,10 @@ public class Aplicativo {
                     System.out.println("Insira o local de nascimento: ");
                     localNascimento = sc.next();
                     professor.setLocalNascimento(localNascimento);
+                    System.out.println("Insira a formação: ");
+                    String formacao = sc.next();
+                    professor.setFormacao(formacao);
+
 
                     professores[contProf] = professor;
                     contProf++;
@@ -76,6 +89,12 @@ public class Aplicativo {
                     System.out.println("Insira o local de nascimento: ");
                     localNascimento = sc.next();
                     psicologo.setLocalNascimento(localNascimento);
+                    System.out.println("Insira a carga horaria: ");
+                    int carga_horaria = sc.nextInt();
+                    psicologo.setCarga_horaria(carga_horaria);
+                    System.out.println("Insira o número do conselho: ");
+                    int numero_conselho = sc.nextInt();
+                    psicologo.setNumero_conselho(numero_conselho);
 
                     psicologos[contPsi] = psicologo;
                     contPsi++;
@@ -94,6 +113,15 @@ public class Aplicativo {
                     System.out.println("Insira o local de nascimento: ");
                     localNascimento = sc.next();
                     tecnico.setLocalNascimento(localNascimento);
+                    System.out.println("Insira o cargo: ");
+                    String cargo = sc.next();
+                    tecnico.setCargo(cargo);
+                    System.out.println("Insira a empresa: ");
+                    String empresa = sc.next();
+                    tecnico.setEmpresa(empresa);
+                    System.out.println("Insira o número do contrato: ");
+                    int num_contrato = sc.nextInt();
+                    tecnico.setNum_contrato(num_contrato);
 
                     tecnicos[contTec] = tecnico;
                     contTec++;
@@ -108,6 +136,10 @@ public class Aplicativo {
                         System.out.println(alunos[i].getSexo());
                         System.out.println(alunos[i].getDataNascimento());
                         System.out.println(alunos[i].getLocalNascimento());
+                        System.out.println(alunos[i].getNota1());
+                        System.out.println(alunos[i].getNota2());
+                        System.out.println(alunos[i].getNota3());
+
                 }
                     break;
                 case 12:
@@ -121,6 +153,7 @@ public class Aplicativo {
                         System.out.println(professores[i].getSexo());
                         System.out.println(professores[i].getDataNascimento());
                         System.out.println(professores[i].getLocalNascimento());
+                        System.out.println(professores[i].getFormacao());
                     }
                     break;
                 case 13:
@@ -134,6 +167,8 @@ public class Aplicativo {
                         System.out.println(psicologos[i].getSexo());
                         System.out.println(psicologos[i].getDataNascimento());
                         System.out.println(psicologos[i].getLocalNascimento());
+                        System.out.println(psicologos[i].getCarga_horaria());
+                        System.out.println(psicologos[i].getNumero_conselho());
                     }
                     break;
                 case 14:
@@ -147,6 +182,9 @@ public class Aplicativo {
                         System.out.println(tecnicos[i].getSexo());
                         System.out.println(tecnicos[i].getDataNascimento());
                         System.out.println(tecnicos[i].getLocalNascimento());
+                        System.out.println(tecnicos[i].getCargo());
+                        System.out.println(tecnicos[i].getEmpresa());
+                        System.out.println(tecnicos[i].getNum_contrato());
                     }
                     break;
                 case 0:
