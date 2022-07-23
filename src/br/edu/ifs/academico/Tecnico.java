@@ -3,6 +3,16 @@ package br.edu.ifs.academico;
 public class Tecnico extends Pessoa {
     private String cargo;
     private String empresa;
+
+    @Override
+    public String toString() {
+        return super.toString() + "Tecnico{" +
+                "cargo='" + cargo + '\'' +
+                ", empresa='" + empresa + '\'' +
+                ", num_contrato=" + num_contrato +
+                '}';
+    }
+
     private int num_contrato;
 
     public String getCargo() {

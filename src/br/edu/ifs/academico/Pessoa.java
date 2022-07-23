@@ -6,6 +6,16 @@ public class Pessoa {
     private String localNascimento;
     private String dataNascimento;
 
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", sexo=" + sexo +
+                ", localNascimento='" + localNascimento + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                '}';
+    }
+
     public void setSexo(char sexo){
         this.sexo = sexo;
     }

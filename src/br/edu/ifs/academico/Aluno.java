@@ -1,9 +1,19 @@
 package br.edu.ifs.academico;
 
 public class Aluno extends Pessoa {
+
     private double nota1;
     private double nota2;
     private double nota3;
+
+    @Override
+    public String toString() {
+        return super.toString() + "Aluno{" +
+                "nota1=" + nota1 +
+                ", nota2=" + nota2 +
+                ", nota3=" + nota3 +
+                '}';
+    }
 
     public double getNota1() {
         return nota1;

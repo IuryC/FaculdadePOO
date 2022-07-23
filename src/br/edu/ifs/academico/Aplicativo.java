@@ -1,15 +1,16 @@
 package br.edu.ifs.academico;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aplicativo {
     public static void main(String[] args) {
 
 
-        Aluno[] alunos = new Aluno[10];
-        Professor[] professores = new Professor[10];
-        Psicologo[] psicologos = new Psicologo[10];
-        Tecnico[] tecnicos = new Tecnico[10];
+        ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+        ArrayList<Professor> professores = new ArrayList<Professor>();
+        ArrayList<Psicologo> psicologos = new ArrayList<Psicologo>();
+        ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -18,12 +19,13 @@ public class Aplicativo {
 
         int opcao = sc.nextInt();
 
-        int contAluno = 0;
-        int contProf = 0;
-        int contPsi = 0;
-        int contTec = 0;
+        char sexo;
+        String dataNascimento;
+        String localNascimento;
 
         while(opcao != 0){
+
+
             switch(opcao){
 
                 case 1:
@@ -32,13 +34,13 @@ public class Aplicativo {
                     System.out.println("Informe o nome: ");
                     aluno.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
-                    char sexo = sc.next().charAt(0);
+                    sexo = sc.next().charAt(0);
                     aluno.setSexo(sexo);
                     System.out.println("Insira a data de nascimento: ");
-                    String dataNascimento = sc.next();
+                    dataNascimento = sc.next();
                     aluno.setDataNascimento(dataNascimento);
                     System.out.println("Insira o local de nascimento: ");
-                    String localNascimento = sc.next();
+                    localNascimento = sc.next();
                     aluno.setLocalNascimento(localNascimento);
                     System.out.println("Insira a primeira nota: ");
                     double nota1 = sc.nextDouble();
@@ -50,8 +52,7 @@ public class Aplicativo {
                     double nota3 = sc.nextDouble();
                     aluno.setNota3(nota3);
 
-                    alunos[contAluno] = aluno;
-                    contAluno++;
+                    alunos.add(aluno);
                     break;
                 case 2:
                     System.out.println("02 - Cadastrar professor");
@@ -72,8 +73,7 @@ public class Aplicativo {
                     professor.setFormacao(formacao);
 
 
-                    professores[contProf] = professor;
-                    contProf++;
+                   professores.add(professor);
                     break;
                 case 3:
                     System.out.println("03 - Cadastrar psicólogo");
@@ -96,8 +96,7 @@ public class Aplicativo {
                     int numero_conselho = sc.nextInt();
                     psicologo.setNumero_conselho(numero_conselho);
 
-                    psicologos[contPsi] = psicologo;
-                    contPsi++;
+                    psicologos.add(psicologo);
                     break;
                 case 4:
                     System.out.println("04 - Cadastrar técnico");
@@ -123,69 +122,23 @@ public class Aplicativo {
                     int num_contrato = sc.nextInt();
                     tecnico.setNum_contrato(num_contrato);
 
-                    tecnicos[contTec] = tecnico;
-                    contTec++;
+                    tecnicos.add(tecnico);
                     break;
                 case 11:
-                    if(alunos[0]==null){
-                        System.out.println("Lista vazia");break;
-                    }
                     System.out.println("Listar alunos");
-                    for(int i = 0; i < contAluno ;i++){
-                        System.out.println(alunos[i].getNome());
-                        System.out.println(alunos[i].getSexo());
-                        System.out.println(alunos[i].getDataNascimento());
-                        System.out.println(alunos[i].getLocalNascimento());
-                        System.out.println(alunos[i].getNota1());
-                        System.out.println(alunos[i].getNota2());
-                        System.out.println(alunos[i].getNota3());
-
-                }
+                    System.out.println(alunos.toString());
                     break;
                 case 12:
                     System.out.println("Listar professores");
-                    if(professores[0]==null){
-                        System.out.println("Lista vazia");
-                        break;
-                    }
-                    for(int i = 0; i < contProf ;i++){
-                        System.out.println(professores[i].getNome());
-                        System.out.println(professores[i].getSexo());
-                        System.out.println(professores[i].getDataNascimento());
-                        System.out.println(professores[i].getLocalNascimento());
-                        System.out.println(professores[i].getFormacao());
-                    }
+                    System.out.println(professores.toString());
                     break;
                 case 13:
                     System.out.println("Listar psicologos");
-                    if(psicologos[0]==null){
-                        System.out.println("Lista vazia");
-                        break;
-                    }
-                    for(int i = 0; i < contPsi ;i++) {
-                        System.out.println(psicologos[i].getNome());
-                        System.out.println(psicologos[i].getSexo());
-                        System.out.println(psicologos[i].getDataNascimento());
-                        System.out.println(psicologos[i].getLocalNascimento());
-                        System.out.println(psicologos[i].getCarga_horaria());
-                        System.out.println(psicologos[i].getNumero_conselho());
-                    }
+                    System.out.println(psicologos.toString());
                     break;
                 case 14:
                     System.out.println("Listar tecnicos");
-                    if(tecnicos[0]==null){
-                        System.out.println("Lista vazia");
-                        break;
-                    }
-                    for(int i = 0; i < contTec ;i++) {
-                        System.out.println(tecnicos[i].getNome());
-                        System.out.println(tecnicos[i].getSexo());
-                        System.out.println(tecnicos[i].getDataNascimento());
-                        System.out.println(tecnicos[i].getLocalNascimento());
-                        System.out.println(tecnicos[i].getCargo());
-                        System.out.println(tecnicos[i].getEmpresa());
-                        System.out.println(tecnicos[i].getNum_contrato());
-                    }
+                    System.out.println(tecnicos.toString());
                     break;
                 case 0:
                     break;
