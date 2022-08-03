@@ -13,6 +13,7 @@ public class Aplicativo {
         ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
         ArrayList<Inspetor> inspetores = new ArrayList<Inspetor>();
         ArrayList<Avaliador> avaliadores = new ArrayList<Avaliador>();
+        ArrayList<AlunoAssistido> alunosAssistidos = new ArrayList<AlunoAssistido>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -24,6 +25,7 @@ public class Aplicativo {
         char sexo;
         String dataNascimento;
         String localNascimento;
+        long cpf = 0;
 
         while(opcao != 0){
 
@@ -32,7 +34,9 @@ public class Aplicativo {
 
                 case 1:
                     System.out.println("01 - Cadastrar aluno");
-                    Aluno aluno = new Aluno();
+                    Aluno aluno = new Aluno(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     aluno.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -58,7 +62,9 @@ public class Aplicativo {
                     break;
                 case 2:
                     System.out.println("02 - Cadastrar professor");
-                    Professor professor = new Professor();
+                    Professor professor = new Professor(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     professor.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -79,7 +85,9 @@ public class Aplicativo {
                     break;
                 case 3:
                     System.out.println("03 - Cadastrar psicólogo");
-                    Psicologo psicologo = new Psicologo();
+                    Psicologo psicologo = new Psicologo(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     psicologo.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -102,7 +110,9 @@ public class Aplicativo {
                     break;
                 case 4:
                     System.out.println("04 - Cadastrar técnico");
-                    Tecnico tecnico = new Tecnico();
+                    Tecnico tecnico = new Tecnico(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     tecnico.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -128,8 +138,10 @@ public class Aplicativo {
                     break;
 
                 case 5:
-                    System.out.println("04 - Cadastrar Inspetor");
-                    Inspetor inspetor = new Inspetor();
+                    System.out.println("05 - Cadastrar Inspetor");
+                    Inspetor inspetor = new Inspetor(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     inspetor.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -152,8 +164,9 @@ public class Aplicativo {
                     break;
 
                 case 6:
-                    System.out.println("04 - Cadastrar Avaliador");
-                    Avaliador avaliador = new Avaliador();
+                    System.out.println("06 - Cadastrar Avaliador");
+                    Avaliador avaliador = new Avaliador(cpf);
+                    cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     avaliador.setNome(sc.next());
                     System.out.println("Informe o sexo: ");
@@ -173,6 +186,41 @@ public class Aplicativo {
                     avaliador.setQtdBancas(qtdBancas);
 
                     avaliadores.add(avaliador);
+                    break;
+
+                case 7:
+                    System.out.println("07 - Cadastrar Aluno assistido");
+                    AlunoAssistido alunoAssistido = new AlunoAssistido(cpf);
+                    System.out.println("CPF");
+                    cpf = sc.nextLong();
+                    System.out.println("Informe o nome: ");
+                    alunoAssistido.setNome(sc.next());
+                    System.out.println("Informe o sexo: ");
+                    sexo = sc.next().charAt(0);
+                    alunoAssistido.setSexo(sexo);
+                    System.out.println("Insira a data de nascimento: ");
+                    dataNascimento = sc.next();
+                    alunoAssistido.setDataNascimento(dataNascimento);
+                    System.out.println("Insira o local de nascimento: ");
+                    localNascimento = sc.next();
+                    alunoAssistido.setLocalNascimento(localNascimento);
+                    System.out.println("Necessidade particular: ");
+                    String necessidadeParticular = sc.next();
+                    alunoAssistido.setNecessidadeParticular(necessidadeParticular);
+                    System.out.println("Insira a bolsa: ");
+                    double bolsa = sc.nextDouble();
+                    alunoAssistido.setBolsa(bolsa);
+                    System.out.println("Insira a data de início da assistência: ");
+                    String dataInicioAssistencia = sc.next();
+                    alunoAssistido.setDataInicioAssistencia(dataInicioAssistencia);
+                    System.out.println("Insira a data final da assistência: ");
+                    String dataFinalAssistencia = sc.next();
+                    alunoAssistido.setDataFimAssistencia(dataFinalAssistencia);
+                    System.out.println("Assistente: ");
+                    String assistente = sc.next();
+                    alunoAssistido.setAssistente(assistente);
+
+                    alunosAssistidos.add(alunoAssistido);
                     break;
 
                 case 11:
@@ -199,6 +247,9 @@ public class Aplicativo {
                     System.out.println("Listar avaliadores");
                     System.out.println(avaliadores.toString());
                     break;
+                case 17:
+                    System.out.println("Listar alunos assistidos");
+                    System.out.println(alunosAssistidos.toString());
                 case 0:
                     break;
             }

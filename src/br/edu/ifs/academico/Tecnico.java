@@ -4,6 +4,10 @@ public class Tecnico extends Pessoa {
     private String cargo;
     private String empresa;
 
+    public Tecnico(long cpf) {
+        super(cpf);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Tecnico{" +

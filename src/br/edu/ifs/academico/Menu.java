@@ -11,6 +11,7 @@ public class Menu {
                 + "04 - Cadastrar Técnico \n"
                 + "05 - Cadastrar Inspetor\n"
                 + "06 - Cadastrar Avaliador\n"
+                + "07 - Cadastrar Alunos Assistido\n"
                 + "\n"
                 + "11 - Listar Alunos \n"
                 + "12 - Listar Professores \n"
@@ -18,6 +19,7 @@ public class Menu {
                 + "14 - Listar Técnicos\n"
                 + "15 - Listar Inspetores\n"
                 + "16 - Listar Avaliadores\n"
+                + "17 - Listar Alunos Assistidos\n"
                 + "0 - Sair\n";
 
     }

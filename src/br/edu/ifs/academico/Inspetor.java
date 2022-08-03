@@ -4,9 +4,13 @@ public class Inspetor extends Pessoa {
     private String cidadeAtuacao;
     private int nivel;
 
+    public Inspetor(long cpf) {
+        super(cpf);
+    }
+
     @Override
     public String toString() {
-        return "Inspetor{" +
+        return super.toString() + "Inspetor{" +
                 "cidadeAtuacao='" + getCidadeAtuacao() + '\'' +
                 ", nivel=" + getNivel() +
                 '}';

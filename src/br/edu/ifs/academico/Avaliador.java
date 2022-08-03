@@ -1,8 +1,12 @@
 package br.edu.ifs.academico;
 
-public class Avaliador extends Pessoa{
+public class Avaliador extends Pessoa {
     private int qtdBancas;
     private String areaAtuacao;
+
+    public Avaliador(long cpf) {
+        super(cpf);
+    }
 
     @Override
     public String toString() {

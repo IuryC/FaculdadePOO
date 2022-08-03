@@ -3,6 +3,10 @@ package br.edu.ifs.academico;
 public class Psicologo extends Pessoa{
     private int carga_horaria;
 
+    public Psicologo(long cpf) {
+        super(cpf);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Psicologo{" +

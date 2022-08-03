@@ -3,6 +3,10 @@ package br.edu.ifs.academico;
 public class Professor extends Pessoa {
     private String formacao;
 
+    public Professor(long cpf) {
+        super(cpf);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Professor{" +

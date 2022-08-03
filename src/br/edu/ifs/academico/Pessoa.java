@@ -1,10 +1,13 @@
 package br.edu.ifs.academico;
 
 public class Pessoa {
+
+    public Pessoa(long cpf) {this.cpf = cpf;}
+
+    private long cpf;
     private String nome;
     private char sexo;
     private String localNascimento;
-    private String dataNascimento;
 
     @Override
     public String toString() {
@@ -15,6 +18,9 @@ public class Pessoa {
                 ", dataNascimento='" + dataNascimento + '\'' +
                 '}';
     }
+
+    private String dataNascimento;
+
 
     public void setSexo(char sexo){
         this.sexo = sexo;
