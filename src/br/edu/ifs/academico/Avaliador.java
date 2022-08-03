@@ -10,10 +10,9 @@ public class Avaliador extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "Avaliador{" +
-                "qtdBancas=" + qtdBancas +
-                ", areaAtuacao=" + areaAtuacao +
-                '}';
+        return super.toString() +
+                "\nQuantidade de bancas = " + qtdBancas +
+                "\nÁrea de atuação = " + areaAtuacao;
     }
 
     public int getQtdBancas() {

@@ -10,13 +10,12 @@ public class AlunoAssistido extends Pessoa{
 
     @Override
     public String toString() {
-        return super.toString() + "AlunoAssistido{" +
-                "necessidadeParticular='" + necessidadeParticular + '\'' +
-                ", bolsa=" + bolsa +
-                ", dataInicioAssistencia='" + dataInicioAssistencia + '\'' +
-                ", dataFimAssistencia='" + dataFimAssistencia + '\'' +
-                ", assistente='" + assistente + '\'' +
-                '}';
+        return super.toString() +
+                "\nNecessidade particular = " + necessidadeParticular +
+                "\nBolsa = " + bolsa +
+                "\nData do início da assistência = " + dataInicioAssistencia +
+                "\nData do fim da assistência = " + dataFimAssistencia +
+                "\nAssistente = " + assistente;
     }
 
     public AlunoAssistido(long cpf) {

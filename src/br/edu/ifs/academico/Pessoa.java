@@ -11,12 +11,11 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", sexo=" + sexo +
-                ", localNascimento='" + localNascimento + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                '}';
+        return
+                "Nome = " + nome +
+                "\nSexo=" + sexo +
+                "\nLocal de nascimento = " + localNascimento +
+                "\nData de nascimento = " + dataNascimento ;
     }
 
     private String dataNascimento;

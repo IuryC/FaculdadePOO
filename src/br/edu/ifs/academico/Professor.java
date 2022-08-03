@@ -9,9 +9,8 @@ public class Professor extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "Professor{" +
-                "formacao='" + formacao + '\'' +
-                '}';
+        return super.toString() +
+                "\nFormação = " + formacao;
     }
 
     public String getFormacao() {

@@ -35,7 +35,7 @@ public class Aplicativo {
                 case 1:
                     System.out.println("01 - Cadastrar aluno");
                     Aluno aluno = new Aluno(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     aluno.setNome(sc.next());
@@ -63,7 +63,7 @@ public class Aplicativo {
                 case 2:
                     System.out.println("02 - Cadastrar professor");
                     Professor professor = new Professor(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     professor.setNome(sc.next());
@@ -86,7 +86,7 @@ public class Aplicativo {
                 case 3:
                     System.out.println("03 - Cadastrar psicólogo");
                     Psicologo psicologo = new Psicologo(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     psicologo.setNome(sc.next());
@@ -111,7 +111,7 @@ public class Aplicativo {
                 case 4:
                     System.out.println("04 - Cadastrar técnico");
                     Tecnico tecnico = new Tecnico(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     tecnico.setNome(sc.next());
@@ -140,7 +140,7 @@ public class Aplicativo {
                 case 5:
                     System.out.println("05 - Cadastrar Inspetor");
                     Inspetor inspetor = new Inspetor(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     inspetor.setNome(sc.next());
@@ -166,6 +166,7 @@ public class Aplicativo {
                 case 6:
                     System.out.println("06 - Cadastrar Avaliador");
                     Avaliador avaliador = new Avaliador(cpf);
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     avaliador.setNome(sc.next());
@@ -191,7 +192,7 @@ public class Aplicativo {
                 case 7:
                     System.out.println("07 - Cadastrar Aluno assistido");
                     AlunoAssistido alunoAssistido = new AlunoAssistido(cpf);
-                    System.out.println("CPF");
+                    System.out.println("Insira o CPF");
                     cpf = sc.nextLong();
                     System.out.println("Informe o nome: ");
                     alunoAssistido.setNome(sc.next());
